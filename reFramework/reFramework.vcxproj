@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{C3F894FC-AE87-4515-B709-33B549EB8F4D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>reFramework</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)External\LuaJIT-2.0.5\src;$(SolutionDir)External\sol2;$(SolutionDir)External\capstone\capstone;$(SolutionDir)External\pe_lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)External\LuaJIT-2.0.5\src;$(SolutionDir)External\sol2;$(SolutionDir)External\capstone\capstone;$(SolutionDir)External\pe_lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\External\pe_lib\entropy.cpp" />
+    <ClCompile Include="..\External\pe_lib\file_version_info.cpp" />
+    <ClCompile Include="..\External\pe_lib\message_table.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_base.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_bound_import.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_checksum.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_debug.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_directory.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_dotnet.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_exception.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_exception_directory.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_exports.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_factory.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_imports.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_load_config.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_properties.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_properties_generic.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_rebuilder.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_relocations.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_resources.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_resource_manager.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_resource_viewer.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_rich_data.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_section.cpp" />
+    <ClCompile Include="..\External\pe_lib\pe_tls.cpp" />
+    <ClCompile Include="..\External\pe_lib\resource_bitmap_reader.cpp" />
+    <ClCompile Include="..\External\pe_lib\resource_bitmap_writer.cpp" />
+    <ClCompile Include="..\External\pe_lib\resource_cursor_icon_reader.cpp" />
+    <ClCompile Include="..\External\pe_lib\resource_cursor_icon_writer.cpp" />
+    <ClCompile Include="..\External\pe_lib\resource_data_info.cpp" />
+    <ClCompile Include="..\External\pe_lib\resource_message_list_reader.cpp" />
+    <ClCompile Include="..\External\pe_lib\resource_string_table_reader.cpp" />
+    <ClCompile Include="..\External\pe_lib\resource_version_info_reader.cpp" />
+    <ClCompile Include="..\External\pe_lib\resource_version_info_writer.cpp" />
+    <ClCompile Include="..\External\pe_lib\utils.cpp" />
+    <ClCompile Include="..\External\pe_lib\version_info_editor.cpp" />
+    <ClCompile Include="..\External\pe_lib\version_info_viewer.cpp" />
+    <ClCompile Include="capstone_api.cpp" />
+    <ClCompile Include="lua_api.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pe_api.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\External\capstone\capstone\capstone.h" />
+    <ClInclude Include="..\External\capstone\capstone\x86.h" />
+    <ClInclude Include="..\External\capstone\platform.h" />
+    <ClInclude Include="..\External\LuaJIT-2.0.5\src\lauxlib.h" />
+    <ClInclude Include="..\External\LuaJIT-2.0.5\src\lua.h" />
+    <ClInclude Include="..\External\LuaJIT-2.0.5\src\lua.hpp" />
+    <ClInclude Include="..\External\LuaJIT-2.0.5\src\luaconf.h" />
+    <ClInclude Include="..\External\LuaJIT-2.0.5\src\luajit.h" />
+    <ClInclude Include="..\External\LuaJIT-2.0.5\src\lualib.h" />
+    <ClInclude Include="..\External\sol2\sol.hpp" />
+    <ClInclude Include="capstone_api.hpp" />
+    <ClInclude Include="lua_api.hpp" />
+    <ClInclude Include="main.hpp" />
+    <ClInclude Include="pe_api.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
